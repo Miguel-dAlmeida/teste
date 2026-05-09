@@ -1,0 +1,2407 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta chars et="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyr Festas – Distribuidora B2B de Artigos Sazonais</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-mode="inicio">
+
+    <!-- PAGE LOADER -->
+    <!-- ── Page Loader ─────────────────────────────── -->
+    <div id="page-loader">
+        <div class="loader-content">
+            <!-- Logo rises from below -->
+            <img class="loader-logo"
+                src="https://res.cloudinary.com/dbcz5yhgs/image/upload/v1772106248/LOGO_NYR_ufn70y.png"
+                alt="Nyr Festas">
+            <!-- Ring draws below the logo -->
+            <div class="loader-ring-wrap">
+                <svg class="loader-svg" viewBox="0 0 52 52">
+                    <g transform="translate(26,26) rotate(-90)">
+                        <circle class="loader-track" cx="0" cy="0" r="22" />
+                        <circle class="loader-ring" cx="0" cy="0" r="22" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- PRE-HEADER -->
+    <!-- <div class="pre-header">
+        <span>DISTRIBUIDORA B2B · ATENDEMOS APENAS CNPJ · ENTREGA PARA TODO O BRASIL</span>
+    </div> -->
+
+    <!-- STICKY NAV -->
+    <nav class="sticky-nav" id="sticky-nav">
+        <div class="container">
+            <a href="#" class="sticky-logo"><img
+                    src="https://res.cloudinary.com/dbcz5yhgs/image/upload/v1772106248/LOGO_NYR_ufn70y.png" alt=""></a>
+            <ul class="sticky-links">
+                <li><a href="#servicos">Sazonalidades</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="sticky-logins">
+                <a href="#" class="btn-login">Login Representante</a>
+                <a href="#" class="btn-login btn-login-primary">Login Cliente</a>
+            </div>
+            <button class="sticky-hamburger" id="sticky-hamburger" aria-label="Abrir menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="sticky-mobile-nav" id="sticky-mobile-nav" aria-hidden="true">
+                <ul>
+                    <li><a href="#servicos">Sazonalidades</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+                <div class="sticky-mobile-logins">
+                    <a href="#" class="btn-login">Login Representante</a>
+                    <a href="#" class="btn-login btn-login-primary">Login Cliente</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="hero">
+
+        <!-- Background clip: canvas + geo confined here, doesn't clip mobile-nav -->
+        <div class="hero-bg-clip">
+
+            <!-- z1: Confetti -->
+            <canvas id="confetti-canvas"></canvas>
+
+            <!-- z2: Geometric layer -->
+            <div class="geo-layer">
+                <div class="geo-px" data-depth="0.15">
+                    <div class="geo-ring-1"></div>
+                </div>
+                <div class="geo-px" data-depth="0.25">
+                    <div class="geo-ring-2"></div>
+                </div>
+                <div class="geo-px" data-depth="0.35">
+                    <div class="geo-ring-3"></div>
+                </div>
+                <div class="geo-px" data-depth="0.55">
+                    <div class="geo-ring-4"></div>
+                </div>
+                <div class="geo-px" data-depth="0.12">
+                    <div class="geo-ring-5"></div>
+                </div>
+                <div class="geo-px" data-depth="0.45">
+                    <div class="geo-sq-1"></div>
+                </div>
+                <div class="geo-px" data-depth="0.60">
+                    <div class="geo-sq-2"></div>
+                </div>
+                <div class="geo-px" data-depth="0.50">
+                    <div class="geo-sq-3"></div>
+                </div>
+                <div class="geo-px" data-depth="0.40">
+                    <div class="geo-dot geo-dot-1"></div>
+                </div>
+                <div class="geo-px" data-depth="0.40">
+                    <div class="geo-dot geo-dot-2"></div>
+                </div>
+                <div class="geo-px" data-depth="0.40">
+                    <div class="geo-dot geo-dot-3"></div>
+                </div>
+                <svg class="geo-svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none">
+                    <line x1="820" y1="900" x2="1440" y2="240" style="stroke:var(--gs-a); stroke-width:1" />
+                    <line x1="900" y1="900" x2="1440" y2="360" style="stroke:var(--gs-b); stroke-width:1" />
+                    <line x1="0" y1="200" x2="340" y2="0" style="stroke:var(--gs-b); stroke-width:1" />
+                    <line x1="1080" y1="460" x2="1140" y2="460" style="stroke:var(--gs-c); stroke-width:1" />
+                    <line x1="1090" y1="472" x2="1130" y2="472" style="stroke:var(--gs-b); stroke-width:1" />
+                    <line x1="680" y1="128" x2="680" y2="158" style="stroke:var(--gs-d); stroke-width:1.5" />
+                    <line x1="665" y1="143" x2="695" y2="143" style="stroke:var(--gs-d); stroke-width:1.5" />
+                </svg>
+            </div><!-- /.geo-layer -->
+        </div><!-- /.hero-bg-clip -->
+
+        <!-- Geo layer above -->
+
+        <!-- Site Header -->
+        <header class="site-header" id="site-header">
+            <div class="header-row-1" id="header-row-1">
+                <div class="header-container">
+                    <a href="#" class="btn-login">Login Representante</a>
+                    <a href="#" class="btn-login btn-login-primary">Login Cliente</a>
+                </div>
+            </div>
+            <div class="header-row-2">
+                <div class="header-container">
+                    <a href="#" class="nav-logo">
+                        <span class="nav-logo-text">NYR FESTAS</span>
+                        <img class="nav-logo-img"
+                            src="https://res.cloudinary.com/dbcz5yhgs/image/upload/v1772106248/LOGO_NYR_ufn70y.png"
+                            alt="Nyr Festas">
+                    </a>
+                    <nav>
+                        <ul class="header-nav">
+                            <li><a href="#servicos">Sazonalidades</a></li>
+                            <li><a href="#produtos">Produtos</a></li>
+                            <li><a href="#sobre">Sobre</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#contato">Contato</a></li>
+                        </ul>
+                        <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+                            <span></span><span></span><span></span>
+                        </button>
+                        <button class="height-hamburger" id="height-hamburger" aria-label="Abrir menu"
+                            aria-expanded="false">
+                            <span></span><span></span><span></span>
+                        </button>
+                    </nav>
+                    <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+                        <ul>
+                            <li><a href="#servicos">Sazonalidades</a></li>
+                            <li><a href="#produtos">Produtos</a></li>
+                            <li><a href="#sobre">Sobre</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#contato">Contato</a></li>
+                        </ul>
+                        <div class="mobile-logins">
+                            <a href="#" class="btn-login">Login Representante</a>
+                            <a href="#" class="btn-login btn-login-primary">Login Cliente</a>
+                        </div>
+                    </div>
+                    <div class="height-nav" id="height-nav" aria-hidden="true">
+                        <ul>
+                            <li><a href="#servicos">Sazonalidades</a></li>
+                            <li><a href="#produtos">Produtos</a></li>
+                            <li><a href="#sobre">Sobre</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#contato">Contato</a></li>
+                        </ul>
+                        <div class="height-nav-logins">
+                            <a href="#" class="btn-login">Login Representante</a>
+                            <a href="#" class="btn-login btn-login-primary">Login Cliente</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero main -->
+        <div class="hero-main">
+
+            <div class="hero-panels">
+
+                <div class="flip-card" id="flip-card">
+
+                    <!-- Panel: Início (front face) -->
+                    <div class="hero-panel" id="panel-inicio">
+                        <div class="inicio-content">
+                            <div class="hero-logo-outer" id="hero-logo-outer">
+                                <div class="hero-logo-wrap">
+                                    <img src="https://res.cloudinary.com/dbcz5yhgs/image/upload/v1772106248/LOGO_NYR_ufn70y.png"
+                                        alt="Nyr Festas" class="hero-logo" id="hero-logo-img">
+                                </div>
+                            </div>
+                            <div class="hero-separator"></div>
+                            <div class="inicio-text">
+                                <span class="inicio-label-top">Distribuidora B2B</span>
+                                <span class="inicio-label-bottom">Artigos de Festas Sazonais</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel: Apresentação (back face) -->
+                    <div class="hero-panel" id="panel-apresentacao">
+                        <div class="apres-content">
+                            <h1 class="apres-title">
+                                <span class="apres-line-sm">Sua</span>
+                                <span class="apres-line-lg">Festa</span>
+                                <span class="apres-line-md">Começa Aqui.</span>
+                            </h1>
+                            <p class="apres-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aperiam unde qui
+                                commodi assumenda eveniet ea quis deleniti quo in, explicabo dolor quisquam enim culpa
+                                mollitia voluptatem debitis. Iusto, praesentium.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Toggle -->
+            <div class="hero-toggle">
+                <div class="toggle-wrap" id="toggle-wrap">
+                    <button class="toggle-btn active" data-target="inicio">Início</button>
+                    <button class="toggle-btn" data-target="apresentacao">Apresentação</button>
+                    <div class="toggle-indicator hinting" id="toggle-indicator"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom -->
+        <div class="hero-bottom">
+            <a href="#numeros" class="hero-scroll" aria-label="Ver mais conteúdo">
+                <span class="scroll-label">Ver mais</span>
+                <span class="scroll-arrow">↓</span>
+            </a>
+        </div>
+
+        <div class="hero-edge"></div>
+
+    </section>
+
+
+
+
+
+    <!-- NUMBERS STRIP -->
+    <section class="numbers-strip reveal" id="numeros">
+        <div class="container">
+            <div class="numbers-grid">
+                <div class="number-item"><span class="number-value" data-target="15">0</span><span
+                        class="number-label">Anos no Mercado</span></div>
+                <div class="number-item"><span class="number-value" data-target="7000">0</span><span
+                        class="number-label">Lojistas Atendidos</span></div>
+                <div class="number-item"><span class="number-value" data-target="27">0</span><span
+                        class="number-label">Estados com Entrega</span></div>
+                <div class="number-item"><span class="number-value" data-target="5">0</span><span
+                        class="number-label">Sazonalidades</span></div>
+            </div>
+        </div>
+    </section>
+    <!-- SERVICES -->
+    <section class="services" id="servicos">
+        <div class="container">
+
+            <div class="service-row reveal">
+                <div class="service-text">
+                    <span class="service-num">01</span>
+                    <span class="service-badge badge-current">Em andamento</span>
+                    <h2 class="service-title">Festa Junina</h2>
+                    <p class="service-desc">Arraial no estoque, lucro na data. A Festa Junina movimenta o varejo de
+                        norte a sul — e o lojista que chega primeiro leva o melhor mix. Nossa linha vai de chapéus e
+                        bandeirinhas a artigos de decoração e fantasia, tudo com <strong>giro garantido</strong>. Peça
+                        antes, venda mais.</p>
+                    <div class="service-countdown" id="cd-junina-wrap">
+                        <div class="service-countdown-unit"><span class="service-countdown-val"
+                                id="cd-junina-d">--</span><span class="service-countdown-label">dias</span></div>
+                        <span class="service-countdown-sep">:</span>
+                        <div class="service-countdown-unit"><span class="service-countdown-val"
+                                id="cd-junina-h">--</span><span class="service-countdown-label">horas</span></div>
+                        <span class="service-countdown-sep">:</span>
+                        <div class="service-countdown-unit"><span class="service-countdown-val"
+                                id="cd-junina-m">--</span><span class="service-countdown-label">min</span></div>
+                        <span class="service-countdown-sep">:</span>
+                        <div class="service-countdown-unit"><span class="service-countdown-val"
+                                id="cd-junina-s">--</span><span class="service-countdown-label">seg</span></div>
+                    </div>
+                </div>
+                <div class="service-img-col">
+                    <div class="service-img-wrap"
+                        style="background:rgba(200,65,11,0.07);border-color:rgba(200,65,11,0.2)">
+                        <span class="service-ilustrativas">Imagens Ilustrativas</span>
+                        <div class="svc-carousel" data-carousel>
+                            <div class="svc-carousel-track">
+                               
+                                <div class="svc-slide"><span class="svc-slide-label">Enfeite</span><img
+                                        src="./src/images/FJ_espantalho.png" alt="Espantalho Junino"></div>
+                                <div class="svc-slide"><span class="svc-slide-label">Inflável</span><img
+                                        src="./src/images/FJ_inflavel.png" alt="Inflável Junino"></div>
+                                <div class="svc-slide"><span class="svc-slide-label">Decoração</span><img
+                                        src="./src/images/FJ_fogueira.png" alt="Fogueira Junina"></div>
+                                <div class="svc-slide"><span class="svc-slide-label">Chapéus</span><img
+                                        src="./src/images/FJ_chapeus.png" alt="Chapéus de Palha"></div>
+                                <div class="svc-slide"><span class="svc-slide-label">Decoração</span><img
+                                        src="./src/images/FJ_balao.png" alt="Balão Junino"></div>
+                                <div class="svc-slide"><span class="svc-slide-label">Adereços</span><img
+                                        src="./src/images/FJ_tiaras-gravatas.png" alt="Adereços Festa Junina">
+                                </div>
+                            </div>
+                            <button class="svc-prev" aria-label="Anterior">&#8249;</button>
+                            <button class="svc-next" aria-label="Próximo">&#8250;</button>
+                            <div class="svc-dots"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-row reverse reveal" style="transition-delay:.1s">
+                <div class="service-text">
+                    <span class="service-num">02</span>
+                    <span class="service-badge badge-upcoming">Em breve</span>
+                    <h2 class="service-title">Copa do Mundo</h2>
+                    <p class="service-desc">De quatro em quatro anos, o Brasil para. E o varejo que não se preparou fica
+                        de fora. Temos a linha completa de artigos para Copa — bandeiras, torcidas, decorações e
+                        fantasias — pronta para entrar no seu estoque <strong>antes do apito inicial</strong>.</p>
+                    <div class="service-countdown" id="cd-copa-wrap">
+                        <div class="service-countdown-unit"><span class="service-countdown-val"
+                                id="cd-copa-d">--</span><span class="service-countdown-label">dias</span></div>
+                        <span class="service-countdown-sep">:</span>
+                        <div class="service-countdown-unit"><span class="service-countdown-val"
+                                id="cd-copa-h">--</span><span class="service-countdown-label">horas</span></div>
+                        <span class="service-countdown-sep">:</span>
+                        <div class="service-countdown-unit"><span class="service-countdown-val"
+                                id="cd-copa-m">--</span><span class="service-countdown-label">min</span></div>
+                        <span class="service-countdown-sep">:</span>
+                        <div class="service-countdown-unit"><span class="service-countdown-val"
+                                id="cd-copa-s">--</span><span class="service-countdown-label">seg</span></div>
+                    </div>
+                </div>
+                <div class="service-img-col">
+                    <div class="service-img-wrap"
+                        style="background:rgba(0,74,173,0.07);border-color:rgba(0,74,173,0.2)">
+                        <span class="service-ilustrativas">Imagens Ilustrativas</span>
+                        <div class="svc-carousel" data-carousel>
+                            <div class="svc-carousel-track">
+                                <div class="svc-slide"><span class="svc-slide-label">Decoração</span><img
+                                        src="./src/images/CP_decoracao.png" alt="Decoração de Copa do Mundo">
+                                </div>
+                                <div class="svc-slide"><span class="svc-slide-label">Bandeira</span><img
+                                        src="./src/images/CP_bandeira-grande.png" alt="Bandeira do Brasil">
+                                </div>
+                                <div class="svc-slide"><span class="svc-slide-label">Chapéu</span><img
+                                        src="./src/images/CP_gorro.png" alt="Gorro de Copa do Mundo">
+                                </div>
+                                <div class="svc-slide"><span class="svc-slide-label">Bandeira</span><img
+                                        src="./src/images/CP_bandeira-haste.png" alt="Bandeira com Haste do Brasil">
+                                </div>
+                                <div class="svc-slide"><span class="svc-slide-label">Chapéu</span><img
+                                        src="./src/images/CP_chapeu.png" alt="Chapéu de Copa do Mundo">
+                                </div>
+                                <div class="svc-slide"><span class="svc-slide-label">Cornetas</span><img
+                                        src="./src/images/CP_cornetas.png" alt="Cornetas"></div>
+                                <div class="svc-slide"><span class="svc-slide-label">Decoração</span><img
+                                        src="./src/images/CP_balao.png" alt="Decoração de Copa do Mundo">
+                                </div>
+                            </div>
+                            <button class="svc-prev" aria-label="Anterior">&#8249;</button>
+                            <button class="svc-next" aria-label="Próximo">&#8250;</button>
+                            <div class="svc-dots"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-row reveal" style="transition-delay:.2s">
+                <div class="service-text">
+                    <span class="service-num">03</span>
+                    <span class="service-badge badge-upcoming">Em breve</span>
+                    <h2 class="service-title">Halloween</h2>
+                    <p class="service-desc">O Halloween virou data no calendário do varejo brasileiro. Decorações,
+                        fantasias e adereços com demanda crescente ano após ano, especialmente nos grandes centros. A
+                        Nyr distribui o que realmente sai do estoque — <strong>sem exotismo desnecessário, com foco no
+                            que vende</strong>.</p>
+                    <div class="service-countdown" id="cd-halloween-wrap">
+                        <div class="service-countdown-unit"><span class="service-countdown-val"
+                                id="cd-halloween-d">--</span><span class="service-countdown-label">dias</span></div>
+                        <span class="service-countdown-sep">:</span>
+                        <div class="service-countdown-unit"><span class="service-countdown-val"
+                                id="cd-halloween-h">--</span><span class="service-countdown-label">horas</span></div>
+                        <span class="service-countdown-sep">:</span>
+                        <div class="service-countdown-unit"><span class="service-countdown-val"
+                                id="cd-halloween-m">--</span><span class="service-countdown-label">min</span></div>
+                        <span class="service-countdown-sep">:</span>
+                        <div class="service-countdown-unit"><span class="service-countdown-val"
+                                id="cd-halloween-s">--</span><span class="service-countdown-label">seg</span></div>
+                    </div>
+                </div>
+                <div class="service-img-col">
+                    <div class="service-img-wrap"
+                        style="background:rgba(123,45,139,0.07);border-color:rgba(123,45,139,0.2)">
+                        <span class="service-ilustrativas">Imagens Ilustrativas</span>
+                        <div class="svc-carousel" data-carousel>
+                            <div class="svc-carousel-track">
+                                <div class="svc-slide"><span class="svc-slide-label">Fantasias</span><img
+                                        src="./src/images/HL_mascaras-luvas-capas.png" alt="Fantasias de Halloween">
+                                </div>
+                                <div class="svc-slide"><span class="svc-slide-label">Inflável</span><img
+                                        src="./src/images/HL_inflavel-2.png" alt="Inflável de Halloween"></div>
+                                <div class="svc-slide"><span class="svc-slide-label">Enfeite</span><img
+                                        src="./src/images/HL_boneco-decorativo.png"
+                                        alt="Boneco Decorativo de Halloween"></div>
+                                <div class="svc-slide"><span class="svc-slide-label">Adereço</span><img
+                                        src="./src/images/HL_cesto-doces.png" alt="Boneco Decorativo de Halloween">
+                                </div>
+                                <div class="svc-slide"><span class="svc-slide-label">Inflável</span><img
+                                        src="./src/images/HL_inflavel.png" alt="Inflável de Halloween"></div>
+                                <div class="svc-slide"><span class="svc-slide-label">Meia-Calça</span><img
+                                        src="./src/images/HL_meias.png" alt="Meia-Calça de Halloween"></div>
+                                <div class="svc-slide"><span class="svc-slide-label">Chapéu</span><img
+                                        src="./src/images/HL_chapeu.png" alt="Chapéu de Halloween"></div>
+                                <div class="svc-slide"><span class="svc-slide-label">Decoração</span><img
+                                        src="./src/images/HL_decoracao.png" alt="Decoração de Halloween">
+                                </div>
+                            </div>
+                            <button class="svc-prev" aria-label="Anterior">&#8249;</button>
+                            <button class="svc-next" aria-label="Próximo">&#8250;</button>
+                            <div class="svc-dots"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="service-row reverse reveal" style="transition-delay:.3s">
+                <div class="service-text">
+                    <span class="service-num">04</span>
+                    <span class="service-badge badge-upcoming">Em breve</span>
+                    <h2 class="service-title">Carnaval</h2>
+                    <p class="service-desc"><em>Não adianta pedir fantasia em fevereiro.</em> O Carnaval exige
+                        antecipação: os melhores lotes saem nos primeiros meses do ano. Nossa linha cobre do acessório
+                        básico à fantasia completa, com variedade para todos os perfis de loja.</p>
+                </div>
+
+                <div class="service-img-col">
+                    <div class="service-img-wrap" style="background:rgba(204,0,0,0.07);border-color:rgba(204,0,0,0.2)">
+                        <span class="service-ilustrativas">Imagens Ilustrativas</span>
+                        <div class="svc-carousel" data-carousel>
+                            <div class="svc-carousel-track">
+                                <div class="svc-slide"><span class="svc-slide-label">Adereço</span><img
+                                        src="./src/images/CR_mascara.png" alt="Adereço de Carnaval"></div>
+
+                                <div class="svc-slide"><span class="svc-slide-label">Decoração</span><img
+                                        src="./src/images/CR_decoracao.png" alt="Decoração Carnaval"></div>
+
+                                <div class="svc-slide"><span class="svc-slide-label">Meia-Calça</span><img
+                                        src="./src/images/CR_meias.png" alt="Adereços de Carnaval"></div>
+
+                                <div class="svc-slide"><span class="svc-slide-label">Fantasia</span><img
+                                        src="./src/images/CR_asas-saias.png" alt="Fantasia de Carnaval"></div>
+
+                                <div class="svc-slide"><span class="svc-slide-label">Adereço</span><img
+                                        src="./src/images/CR_coroa.png" alt="Adereço de Carnaval"></div>
+
+                                <div class="svc-slide"><span class="svc-slide-label">Brinco</span><img
+                                        src="./src/images/CR_brinco.png" alt="Adereço de Carnaval"></div>
+
+
+                            </div>
+                            <button class="svc-prev" aria-label="Anterior">&#8249;</button>
+                            <button class="svc-next" aria-label="Próximo">&#8250;</button>
+                            <div class="svc-dots"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-row reveal" style="transition-delay:.4s">
+                <div class="service-text">
+                    <span class="service-num">05</span>
+                    <span class="service-badge badge-upcoming">Em breve</span>
+                    <h2 class="service-title">Páscoa</h2>
+                    <p class="service-desc">Páscoa não é só chocolate. Decorações, coelhos, caçadas ao ovo — o universo
+                        da data é mais amplo do que parece, e o lojista que explora isso <strong>multiplica a receita
+                            por metro quadrado</strong>. A Nyr tem o mix para isso.</p>
+                </div>
+                <div class="service-img-col">
+                    <div class="service-img-wrap"
+                        style="background:rgba(123,45,139,0.07);border-color:rgba(123,45,139,0.2)">
+                        <span class="service-ilustrativas">Imagens Ilustrativas</span>
+                        <div class="svc-carousel" data-carousel>
+                            <div class="svc-carousel-track">
+                                <div class="svc-slide"><span class="svc-slide-label">Enfeite</span><img
+                                        src="./src/images/PA_guirlanda.png" alt="Enfeite de Páscoa"></div>
+
+                                <div class="svc-slide"><span class="svc-slide-label">Adereço</span><img
+                                        src="./src/images/PA_tiaras.png" alt="Adereços de Páscoa"></div>
+
+                                <div class="svc-slide"><span class="svc-slide-label">Enfeite</span><img
+                                        src="./src/images/PA_coelhinhos-vareta.png" alt="Enfeite de Páscoa"></div>
+
+                                <div class="svc-slide"><span class="svc-slide-label">Decoração</span><img
+                                        src="./src/images/PA_luminarias.png" alt="Enfeite de Páscoa"></div>
+
+                                <div class="svc-slide"><span class="svc-slide-label">Enfeite</span><img
+                                        src="./src/images/PA_coelhinhos.png" alt="Enfeite de Páscoa"></div>
+                            </div>
+                            <button class="svc-prev" aria-label="Anterior">&#8249;</button>
+                            <button class="svc-next" aria-label="Próximo">&#8250;</button>
+                            <div class="svc-dots"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- PRODUCTS -->
+    <section class="products" id="produtos">
+        <div class="container">
+            <div class="products-header reveal">
+                <span class="section-eyebrow">Catálogo</span>
+                <h2 class="section-title">Nossos <em>Produtos</em></h2>
+            </div>
+            <div class="season-tabs reveal" style="transition-delay:.1s">
+                <button class="season-tab active" data-season="junina">Festa Junina</button>
+                <button class="season-tab" data-season="copa">Copa</button>
+                <button class="season-tab" data-season="halloween">Halloween</button>
+                <button class="season-tab" data-season="carnaval">Carnaval</button>
+                <button class="season-tab" data-season="pascoa">Páscoa</button>
+            </div>
+
+            <!-- macro para 4 cards -->
+            <!-- JUNINA -->
+            <div class="season-panel active" data-panel="junina">
+                <span class="products-row-label">Fileira 01 — Destaques</span>
+                <div class="cards-row-wrapper">
+                    <button class="carousel-arrow carousel-arrow-prev"><svg viewBox="0 0 24 24">
+                            <polyline points="15 18 9 12 15 6" />
+                        </svg></button>
+                    <div class="cards-row">
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Produto 01</span></div><span
+                                    class="card-badge">NOVO</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><button
+                                    class="card-cta"><svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Produto 02</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><button
+                                    class="card-cta"><svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Produto 03</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><button
+                                    class="card-cta"><svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Produto 04</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><button
+                                    class="card-cta"><svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                    </div>
+                    <button class="carousel-arrow carousel-arrow-next"><svg viewBox="0 0 24 24">
+                            <polyline points="9 18 15 12 9 6" />
+                        </svg></button>
+                </div>
+                <span class="products-row-label" style="margin-top:8px">Fileira 02 — Mais Vendidos</span>
+                <div class="cards-row-wrapper">
+                    <button class="carousel-arrow carousel-arrow-prev"><svg viewBox="0 0 24 24">
+                            <polyline points="15 18 9 12 15 6" />
+                        </svg></button>
+                    <div class="cards-row">
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Produto 05</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><button
+                                    class="card-cta"><svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Produto 06</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><button
+                                    class="card-cta"><svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Produto 07</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><button
+                                    class="card-cta"><svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Produto 08</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><button
+                                    class="card-cta"><svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                    </div>
+                    <button class="carousel-arrow carousel-arrow-next"><svg viewBox="0 0 24 24">
+                            <polyline points="9 18 15 12 9 6" />
+                        </svg></button>
+                </div>
+            </div>
+
+            <!-- COPA -->
+            <div class="season-panel" data-panel="copa">
+                <span class="products-row-label">Fileira 01 — Destaques</span>
+                <div class="cards-row-wrapper">
+                    <button class="carousel-arrow carousel-arrow-prev"><svg viewBox="0 0 24 24">
+                            <polyline points="15 18 9 12 15 6" />
+                        </svg></button>
+                    <div class="cards-row">
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Copa 01</span></div><span
+                                    class="card-badge">NOVO</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><button
+                                    class="card-cta"><svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Copa 02</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><button
+                                    class="card-cta"><svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Copa 03</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><button
+                                    class="card-cta"><svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Copa 04</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><button
+                                    class="card-cta"><svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                    </div>
+                    <button class="carousel-arrow carousel-arrow-next"><svg viewBox="0 0 24 24">
+                            <polyline points="9 18 15 12 9 6" />
+                        </svg></button>
+                </div>
+                <span class="products-row-label" style="margin-top:8px">Fileira 02</span>
+                <div class="cards-row-wrapper">
+                    <button class="carousel-arrow carousel-arrow-prev"><svg viewBox="0 0 24 24">
+                            <polyline points="15 18 9 12 15 6" />
+                        </svg></button>
+                    <div class="cards-row">
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Copa 05</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Copa 06</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Copa 07</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Copa 08</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                    </div>
+                    <button class="carousel-arrow carousel-arrow-next"><svg viewBox="0 0 24 24">
+                            <polyline points="9 18 15 12 9 6" />
+                        </svg></button>
+                </div>
+            </div>
+
+            <!-- HALLOWEEN -->
+            <div class="season-panel" data-panel="halloween">
+                <span class="products-row-label">Fileira 01 — Destaques</span>
+                <div class="cards-row-wrapper">
+                    <button class="carousel-arrow carousel-arrow-prev"><svg viewBox="0 0 24 24">
+                            <polyline points="15 18 9 12 15 6" />
+                        </svg></button>
+                    <div class="cards-row">
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Halloween 01</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Halloween 02</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Halloween 03</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Halloween 04</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                    </div>
+                    <button class="carousel-arrow carousel-arrow-next"><svg viewBox="0 0 24 24">
+                            <polyline points="9 18 15 12 9 6" />
+                        </svg></button>
+                </div>
+                <span class="products-row-label" style="margin-top:8px">Fileira 02</span>
+                <div class="cards-row-wrapper">
+                    <button class="carousel-arrow carousel-arrow-prev"><svg viewBox="0 0 24 24">
+                            <polyline points="15 18 9 12 15 6" />
+                        </svg></button>
+                    <div class="cards-row">
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Halloween 05</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Halloween 06</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Halloween 07</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Halloween 08</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                    </div>
+                    <button class="carousel-arrow carousel-arrow-next"><svg viewBox="0 0 24 24">
+                            <polyline points="9 18 15 12 9 6" />
+                        </svg></button>
+                </div>
+            </div>
+
+            <!-- CARNAVAL -->
+            <div class="season-panel" data-panel="carnaval">
+                <span class="products-row-label">Fileira 01 — Destaques</span>
+                <div class="cards-row-wrapper">
+                    <button class="carousel-arrow carousel-arrow-prev"><svg viewBox="0 0 24 24">
+                            <polyline points="15 18 9 12 15 6" />
+                        </svg></button>
+                    <div class="cards-row">
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Carnaval 01</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Carnaval 02</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Carnaval 03</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Carnaval 04</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                    </div>
+                    <button class="carousel-arrow carousel-arrow-next"><svg viewBox="0 0 24 24">
+                            <polyline points="9 18 15 12 9 6" />
+                        </svg></button>
+                </div>
+                <span class="products-row-label" style="margin-top:8px">Fileira 02</span>
+                <div class="cards-row-wrapper">
+                    <button class="carousel-arrow carousel-arrow-prev"><svg viewBox="0 0 24 24">
+                            <polyline points="15 18 9 12 15 6" />
+                        </svg></button>
+                    <div class="cards-row">
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Carnaval 05</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Carnaval 06</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Carnaval 07</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Carnaval 08</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                    </div>
+                    <button class="carousel-arrow carousel-arrow-next"><svg viewBox="0 0 24 24">
+                            <polyline points="9 18 15 12 9 6" />
+                        </svg></button>
+                </div>
+            </div>
+
+            <!-- PÁSCOA -->
+            <div class="season-panel" data-panel="pascoa">
+                <span class="products-row-label">Fileira 01 — Destaques</span>
+                <div class="cards-row-wrapper">
+                    <button class="carousel-arrow carousel-arrow-prev"><svg viewBox="0 0 24 24">
+                            <polyline points="15 18 9 12 15 6" />
+                        </svg></button>
+                    <div class="cards-row">
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Páscoa 01</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Páscoa 02</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Páscoa 03</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Páscoa 04</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                    </div>
+                    <button class="carousel-arrow carousel-arrow-next"><svg viewBox="0 0 24 24">
+                            <polyline points="9 18 15 12 9 6" />
+                        </svg></button>
+                </div>
+                <span class="products-row-label" style="margin-top:8px">Fileira 02</span>
+                <div class="cards-row-wrapper">
+                    <button class="carousel-arrow carousel-arrow-prev"><svg viewBox="0 0 24 24">
+                            <polyline points="15 18 9 12 15 6" />
+                        </svg></button>
+                    <div class="cards-row">
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Páscoa 05</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Páscoa 06</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Páscoa 07</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <div class="card-media-placeholder"><span>Páscoa 08</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nome do Produto</h3>
+                                <p class="card-desc">Lorem ipsum dolor sit amet.</p><button class="card-cta"><svg
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                                    </svg>Falar com Atendente</button><a href="#" class="card-video-btn"
+                                    target="_blank"><svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>Ver Vídeo do Produto</a>
+                            </div>
+                        </article>
+                    </div>
+                    <button class="carousel-arrow carousel-arrow-next"><svg viewBox="0 0 24 24">
+                            <polyline points="9 18 15 12 9 6" />
+                        </svg></button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- SOBRE -->
+    <section class="sobre" id="sobre">
+        <div class="container">
+            <div class="sobre-grid reveal">
+                <div class="sobre-text-top">
+                    <span class="section-eyebrow">Quem Somos</span>
+                    <h2 class="sobre-title">Uma parceira de<br>verdade para o<br>seu negócio.</h2>
+                    <p class="sobre-sub">Há mais de 15 anos abastecemos lojistas em todo o Brasil com artigos para as
+                        principais datas do calendário festivo — com preço de atacado, variedade real e entrega que
+                        funciona.</p>
+                </div>
+                <div class="sobre-img-right">
+                    <div class="sobre-img-placeholder"><span>Foto · Showroom</span></div>
+                </div>
+                <div class="sobre-img-left">
+                    <div class="sobre-img-placeholder"><img src="./src/images/testeSobre.jpeg" alt=""></div>
+                </div>
+                <div class="sobre-para-grid">
+                    <p class="sobre-para">A Nyr Festas nasceu da percepção de que o varejo sazonal brasileiro carecia de
+                        um fornecedor especializado: uma empresa que entendesse o calendário de festas, trabalhasse com
+                        o mix certo e chegasse no prazo. Ao longo de <strong>mais de 15 anos</strong>, construímos uma
+                        base de <strong>mais de 7.000 lojistas</strong> em <strong>27 estados</strong> — de papelarias e
+                        lojas de presentes a empórios e magazines regionais. Trabalhamos exclusivamente com CNPJ e
+                        focamos em parcerias de longo prazo: o lojista que compra com a Nyr sabe o que está pedindo,
+                        sabe que vai chegar e sabe que vai vender.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PILARES -->
+    <section class="pilares">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Por que a Nyr</span>
+                <h2 class="title-dark">Nossos <em>Pilares</em></h2>
+            </div>
+            <div class="pilares-grid">
+                <div class="pilar-card reveal">
+                    <div class="pilar-icon"><svg viewBox="0 0 24 24">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg></div>
+                    <h3 class="pilar-title">Honestidade</h3>
+                    <p class="pilar-desc">Nenhuma surpresa no pedido, nenhuma promessa que não cumprimos. O que está no
+                        catálogo é o que chega no seu estoque — descrição, quantidade e condição.</p>
+                </div>
+                <div class="pilar-card reveal" style="transition-delay:.1s">
+                    <div class="pilar-icon"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg></div>
+                    <h3 class="pilar-title">Preço Justo</h3>
+                    <p class="pilar-desc">Preço de atacado que permite margem real no varejo. Sem pressão de volume
+                        excessivo, sem variação surpresa na hora de fechar o pedido.</p>
+                </div>
+                <div class="pilar-card reveal" style="transition-delay:.2s">
+                    <div class="pilar-icon"><svg viewBox="0 0 24 24">
+                            <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                        </svg></div>
+                    <h3 class="pilar-title">Entrega Nacional</h3>
+                    <p class="pilar-desc">Atendemos 27 estados com transportadoras parceiras e rastreamento. Da Grande
+                        São Paulo ao interior do Nordeste — seu pedido chega.</p>
+                </div>
+                <div class="pilar-card reveal" style="transition-delay:.3s">
+                    <div class="pilar-icon"><svg viewBox="0 0 24 24">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg></div>
+                    <h3 class="pilar-title">Envio Ágil</h3>
+                    <p class="pilar-desc">Festa com data marcada não aceita atraso. Processamos e despachamos com
+                        agilidade para você não perder a janela da sazonalidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="depoimentos">
+        <div class="container">
+            <div class="depo-header reveal">
+                <span class="section-eyebrow">Depoimentos</span>
+                <h2 class="section-title">O que dizem<br>nossos <em>lojistas</em></h2>
+            </div>
+            <div class="depo-carousel-wrapper">
+                <div class="depo-track" id="depo-track">
+                    <div class="depo-card">
+                        <span class="depo-quote">"</span>
+                        <p class="depo-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris.</p>
+                        <hr class="depo-divider">
+                        <div class="depo-author">
+                            <div class="depo-avatar">JC</div>
+                            <div>
+                                <p class="depo-name">João Costa</p>
+                                <p class="depo-role">Papelaria · São Paulo, SP</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="depo-card colored">
+                        <span class="depo-quote">"</span>
+                        <p class="depo-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat.</p>
+                        <hr class="depo-divider">
+                        <div class="depo-author">
+                            <div class="depo-avatar">MS</div>
+                            <div>
+                                <p class="depo-name">Maria Silva</p>
+                                <p class="depo-role">Loja de Festas · Belo Horizonte, MG</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="depo-card colored">
+                        <span class="depo-quote">"</span>
+                        <p class="depo-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint
+                            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                            laborum.</p>
+                        <hr class="depo-divider">
+                        <div class="depo-author">
+                            <div class="depo-avatar">PR</div>
+                            <div>
+                                <p class="depo-name">Pedro Rocha</p>
+                                <p class="depo-role">Armarinho · Curitiba, PR</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="depo-card">
+                        <span class="depo-quote">"</span>
+                        <p class="depo-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam libero
+                            tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
+                            placeat.</p>
+                        <hr class="depo-divider">
+                        <div class="depo-author">
+                            <div class="depo-avatar">AL</div>
+                            <div>
+                                <p class="depo-name">Ana Lima</p>
+                                <p class="depo-role">Empório · Recife, PE</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="depo-card colored">
+                        <span class="depo-quote">"</span>
+                        <p class="depo-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Temporibus autem
+                            quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.
+                        </p>
+                        <hr class="depo-divider">
+                        <div class="depo-author">
+                            <div class="depo-avatar">CF</div>
+                            <div>
+                                <p class="depo-name">Carlos Ferreira</p>
+                                <p class="depo-role">Bazar · Fortaleza, CE</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="depo-dots" id="depo-dots"></div>
+        </div>
+    </section>
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">FAQ</span>
+                <h2 class="section-title">Perguntas <em>Frequentes</em></h2>
+            </div>
+            <div class="faq-list reveal" style="transition-delay:.1s">
+                <div class="faq-item">
+                    <button class="faq-question"><span class="faq-question-text">Atendemos apenas lojistas com
+                            CNPJ?</span>
+                        <div class="faq-icon"><svg viewBox="0 0 24 24">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim. Nosso atendimento é exclusivamente B2B. Para realizar pedidos, é necessário possuir CNPJ
+                            ativo. Pessoa física não é atendida.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"><span class="faq-question-text">Qual o pedido mínimo?</span>
+                        <div class="faq-icon"><svg viewBox="0 0 24 24">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Para novos clientes, o pedido mínimo é de R$ 1.500 com pagamento antecipado. Clientes com
+                            cadastro ativo têm acesso a condições diferenciadas — prazos, formas de pagamento e valores
+                            de entrada sujeitos a negociação conforme o histórico.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"><span class="faq-question-text">Vocês entregam para todo o
+                            Brasil?</span>
+                        <div class="faq-icon"><svg viewBox="0 0 24 24">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim. Realizamos entregas para todos os 27 estados brasileiros. O prazo e o frete variam
+                            conforme a região de destino.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"><span class="faq-question-text">Como funciona o catálogo?</span>
+                        <div class="faq-icon"><svg viewBox="0 0 24 24">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O catálogo completo com preços, códigos e descrições é enviado mediante análise de cadastro.
+                            Entre em contato via WhatsApp com seu CNPJ e Razão Social.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"><span class="faq-question-text">Quais sazonalidades vocês
+                            atendem?</span>
+                        <div class="faq-icon"><svg viewBox="0 0 24 24">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Atendemos Carnaval, Páscoa, Festa Junina, Halloween e Copa do Mundo (em anos de Copa). Cada
+                            sazonalidade conta com linha exclusiva de produtos.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"><span class="faq-question-text">Como funciona a entrega?</span>
+                        <div class="faq-icon"><svg viewBox="0 0 24 24">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Trabalhamos com a transportadora de preferência do lojista ou indicamos parceiros confiáveis.
+                            O frete é por conta do comprador. Clientes da Grande São Paulo têm a opção de receber
+                            diretamente pelo nosso veículo, sem custo adicional de transportadora — consulte
+                            disponibilidade ao fechar o pedido.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA + FORM -->
+    <section class="cta" id="contato">
+        <div class="container">
+            <div class="cta-grid reveal">
+                <div class="cta-text">
+                    <span class="cta-eyebrow">Solicitar Catálogo</span>
+                    <h2 class="cta-title">Gostou do que<br>viu? <em>Fale com<br>a gente.</em></h2>
+                    <p class="cta-sub">Nosso catálogo completo — com preços, códigos e descrições — é exclusivo para
+                        lojistas cadastrados. Preencha ao lado e nossa equipe entra em contato.</p>
+                </div>
+                <div class="cta-form">
+                    <div class="form-group">
+                        <label class="form-label" for="razao-social">Razão Social</label>
+                        <input class="form-input" type="text" id="razao-social" placeholder="Nome da sua empresa"
+                            autocomplete="organization">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="cnpj">CNPJ</label>
+                        <input class="form-input" type="text" id="cnpj" placeholder="00.000.000/0000-00" maxlength="18">
+                    </div>
+                    <button class="form-submit" id="btn-whatsapp">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                        </svg>
+                        Enviar pelo WhatsApp
+                    </button>
+                    <p class="form-note">Apenas lojistas com CNPJ ativo · Retorno em até 24h úteis</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div>
+                    <span class="footer-logo">NYR<em>·</em>FESTAS</span>
+                    <span class="footer-tagline">Distribuidora B2B · Artigos Sazonais</span>
+                </div>
+                <nav>
+                    <ul class="footer-nav">
+                        <li><a href="#servicos">Sazonalidades</a></li>
+                        <li><a href="#produtos">Produtos</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-socials">
+                    <a href="#" class="footer-social" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="footer-social" target="_blank" rel="noopener" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-mid">
+                <div>
+                    <span class="footer-contact-badge">Fale Conosco</span>
+                    <p class="footer-contact-item"><strong>E-mail:</strong> contato@nyrfestas.com.br</p>
+                    <p class="footer-contact-item"><strong>WhatsApp:</strong> (11) 99999-9999</p>
+                    <p class="footer-contact-item"><strong>Endereço:</strong> São Paulo, SP – Brasil</p>
+                    <p class="footer-contact-item"><strong>CNPJ:</strong> 00.000.000/0001-00</p>
+                </div>
+                <div>
+                    <p class="footer-newsletter-title">Receber novidades</p>
+                    <div class="footer-email-row">
+                        <input class="footer-email-input" type="email" placeholder="seu@email.com.br">
+                        <button class="footer-email-btn">Inscrever</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">© 2025 Nyr Festas · CNPJ 00.000.000/0001-00 · Todos os direitos reservados</p>
+                <p class="footer-copy"><a href="#">Política de Privacidade</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FABs -->
+    <div class="fab-group">
+        <a href="https://instagram.com/nyrfestas" class="fab fab-instagram" target="_blank" rel="noopener"
+            aria-label="Instagram">
+            <svg viewBox="0 0 24 24">
+                <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+        </a>
+        <a href="https://wa.me/5511999999999" class="fab fab-whatsapp" target="_blank" rel="noopener"
+            aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+            </svg>
+        </a>
+    </div>
+
+    <script>
+        // PAGE LOADER — handled by hero Promise.all below
+
+
+        // ─── CONFIG SAZONALIDADES ─────────────────────────────────
+        const SEASONS = {
+            junina: { primary: '#C8410B', accent: '#F4B400', light: '#FFF5E0' },
+            copa: { primary: '#004AAD', accent: '#009C3B', light: '#E8F0FB' },
+            halloween: { primary: '#7B2D8B', accent: '#FF6B00', light: '#F5E6FF' },
+            carnaval: { primary: '#CC0000', accent: '#FFD700', light: '#FFF5F5' },
+            pascoa: { primary: '#7B2D8B', accent: '#F39C12', light: '#F5E6FF' },
+        };
+        const root = document.documentElement;
+
+        function applySeason(s) {
+            const c = SEASONS[s] || SEASONS.junina;
+            root.style.setProperty('--season-primary', c.primary);
+            root.style.setProperty('--season-accent', c.accent);
+            root.style.setProperty('--season-light', c.light);
+        }
+        applySeason('junina');
+
+        // ─── COUNTDOWNS COMPLETOS (Junina, Copa, Halloween) ───────
+        const CD_TARGETS = {
+            junina: new Date('2026-06-01T00:00:00'),
+            copa: new Date('2026-06-11T00:00:00'),
+            halloween: new Date('2026-10-31T00:00:00'),
+        };
+        const pad = n => String(Math.max(0, n)).padStart(2, '0');
+
+        function updateCountdown(key) {
+            const diff = CD_TARGETS[key] - new Date();
+            const d = diff > 0 ? Math.floor(diff / 86400000) : 0;
+            const h = diff > 0 ? Math.floor((diff % 86400000) / 3600000) : 0;
+            const m = diff > 0 ? Math.floor((diff % 3600000) / 60000) : 0;
+            const s = diff > 0 ? Math.floor((diff % 60000) / 1000) : 0;
+            const set = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = pad(v); };
+            set(`cd-${key}-d`, d);
+            set(`cd-${key}-h`, h);
+            set(`cd-${key}-m`, m);
+            set(`cd-${key}-s`, s);
+        }
+        Object.keys(CD_TARGETS).forEach(key => {
+            updateCountdown(key);
+            setInterval(() => updateCountdown(key), 1000);
+        });
+
+        // ─── HERO CAROUSEL ────────────────────────────────────────
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots = document.querySelectorAll('.hero-dot');
+        let cur = 0, timer;
+
+        function goTo(n) {
+            slides[cur].classList.remove('active');
+            dots[cur].classList.remove('active');
+            cur = (n + slides.length) % slides.length;
+            slides[cur].classList.add('active');
+            dots[cur].classList.add('active');
+        }
+        function startAuto() { timer = setInterval(() => goTo(cur + 1), 4000); }
+
+        dots.forEach((d, i) => d.addEventListener('click', () => { clearInterval(timer); goTo(i); startAuto(); }));
+        startAuto();
+
+        // ─── STICKY NAV ───────────────────────────────────────────
+        const stickyNav = document.getElementById('sticky-nav');
+        const heroEl = document.getElementById('hero');
+
+        window.addEventListener('scroll', () => {
+            const heroBottom = heroEl.getBoundingClientRect().bottom;
+            stickyNav.classList.toggle('visible', heroBottom < 60);
+        }, { passive: true });
+
+        // ─── HAMBURGER HEADER ─────────────────────────────────────
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobile-nav');
+        const siteHeader = document.querySelector('.site-header');
+
+        function closeHeaderMenu() {
+            hamburger.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+            mobileNav.classList.remove('open');
+            mobileNav.setAttribute('aria-hidden', 'true');
+            siteHeader && siteHeader.classList.remove('menu-open');
+        }
+        hamburger && hamburger.addEventListener('click', () => {
+            const isOpen = hamburger.classList.toggle('open');
+            hamburger.setAttribute('aria-expanded', isOpen);
+            mobileNav.classList.toggle('open', isOpen);
+            mobileNav.setAttribute('aria-hidden', !isOpen);
+            siteHeader && siteHeader.classList.toggle('menu-open', isOpen);
+        });
+        mobileNav && mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeHeaderMenu));
+        document.addEventListener('click', e => {
+            if (mobileNav && mobileNav.classList.contains('open') && !hamburger.contains(e.target) && !mobileNav.contains(e.target)) closeHeaderMenu();
+        });
+
+        // ─── HAMBURGER STICKY ─────────────────────────────────────
+        const stickyHamburger = document.getElementById('sticky-hamburger');
+        const stickyMobileNav = document.getElementById('sticky-mobile-nav');
+
+        function closeStickyMenu() {
+            stickyHamburger.classList.remove('open');
+            stickyHamburger.setAttribute('aria-expanded', 'false');
+            stickyMobileNav.classList.remove('open');
+            stickyMobileNav.setAttribute('aria-hidden', 'true');
+        }
+        stickyHamburger && stickyHamburger.addEventListener('click', () => {
+            const isOpen = stickyHamburger.classList.toggle('open');
+            stickyHamburger.setAttribute('aria-expanded', isOpen);
+            stickyMobileNav.classList.toggle('open', isOpen);
+            stickyMobileNav.setAttribute('aria-hidden', !isOpen);
+        });
+        stickyMobileNav && stickyMobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeStickyMenu));
+        document.addEventListener('click', e => {
+            if (stickyMobileNav && stickyMobileNav.classList.contains('open') && !stickyHamburger.contains(e.target) && !stickyMobileNav.contains(e.target)) closeStickyMenu();
+        });
+
+        // ─── REVEAL ───────────────────────────────────────────────
+        const revObs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revObs.unobserve(e.target); } });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
+
+        // ─── NUMBER COUNTER ───────────────────────────────────────
+        function animCount(el) {
+            const target = +el.dataset.target;
+            const step = target / (1800 / 16);
+            let val = 0;
+            const t = setInterval(() => {
+                val = Math.min(val + step, target);
+                el.textContent = Math.floor(val) + (target >= 100 ? '+' : '');
+                if (val >= target) clearInterval(t);
+            }, 16);
+        }
+        const numObs = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.querySelectorAll('.number-value').forEach(animCount);
+                    numObs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.3 });
+        const numStrip = document.querySelector('.numbers-strip');
+        if (numStrip) numObs.observe(numStrip);
+
+        // ─── SEASON TABS ──────────────────────────────────────────
+        document.querySelectorAll('.season-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                const s = tab.dataset.season;
+                document.querySelectorAll('.season-tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+                document.querySelectorAll('.season-panel').forEach(p => p.classList.remove('active'));
+                tab.classList.add('active');
+                tab.setAttribute('aria-selected', 'true');
+                document.querySelector(`[data-panel="${s}"]`).classList.add('active');
+                applySeason(s);
+            });
+        });
+
+        // ─── PRODUCT CAROUSELS ────────────────────────────────────
+        function initCarousels() {
+            document.querySelectorAll('.cards-row-wrapper').forEach(wrapper => {
+                const row = wrapper.querySelector('.cards-row');
+                const prev = wrapper.querySelector('.carousel-arrow-prev');
+                const next = wrapper.querySelector('.carousel-arrow-next');
+                if (!row) return;
+                const CARD_W = 273, GAP = 20;
+                const cards = row.querySelectorAll('.card');
+
+                function check() {
+                    const fit = Math.floor((wrapper.clientWidth + GAP) / (CARD_W + GAP));
+                    const needs = cards.length > fit;
+                    wrapper.classList.toggle('carousel-mode', needs);
+                }
+                check();
+                window.addEventListener('resize', check, { passive: true });
+
+                const step = CARD_W + GAP;
+                prev && prev.addEventListener('click', () => row.scrollBy({ left: -step, behavior: 'smooth' }));
+                next && next.addEventListener('click', () => row.scrollBy({ left: step, behavior: 'smooth' }));
+            });
+        }
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initCarousels);
+        } else {
+            initCarousels();
+        }
+
+        // ─── DEPOIMENTOS CAROUSEL ─────────────────────────────────
+        (function () {
+            const track = document.getElementById('depo-track');
+            const dotsWrap = document.getElementById('depo-dots');
+            if (!track || !dotsWrap) return;
+
+            const cards = Array.from(track.querySelectorAll('.depo-card'));
+            const total = cards.length;
+            let idx = 0;
+
+            function vis() {
+                const w = window.innerWidth;
+                return w < 600 ? 1 : w < 900 ? 2 : 3;
+            }
+            function cardW() {
+                const wrapper = track.parentElement;
+                const v = vis();
+                const totalGap = 20 * (v - 1);
+                return Math.floor((wrapper.clientWidth - totalGap) / v);
+            }
+            function setCardWidths() {
+                const w = cardW();
+                cards.forEach(c => { c.style.flex = '0 0 ' + w + 'px'; });
+            }
+            function buildDots() {
+                dotsWrap.innerHTML = '';
+                const max = Math.max(1, total - vis() + 1);
+                for (let i = 0; i < max; i++) {
+                    const dot = document.createElement('button');
+                    dot.className = 'depo-dot' + (i === idx ? ' active' : '');
+                    dot.setAttribute('aria-label', 'Depoimento ' + (i + 1));
+                    const captured = i;
+                    dot.addEventListener('click', () => { idx = captured; render(); });
+                    dotsWrap.appendChild(dot);
+                }
+            }
+            function render() {
+                const w = cardW();
+                track.style.transform = 'translateX(-' + (idx * (w + 20)) + 'px)';
+                dotsWrap.querySelectorAll('.depo-dot').forEach((d, i) => d.classList.toggle('active', i === idx));
+            }
+            function init() {
+                setCardWidths();
+                buildDots();
+                render();
+            }
+            init();
+            window.addEventListener('resize', () => { idx = 0; init(); }, { passive: true });
+        })();
+
+        // ─── FAQ ACCORDION ────────────────────────────────────────
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.closest('.faq-item');
+                const wasOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                if (!wasOpen) item.classList.add('open');
+            });
+        });
+
+        // ─── CNPJ MASK ────────────────────────────────────────────
+        document.getElementById('cnpj').addEventListener('input', function () {
+            let v = this.value.replace(/\D/g, '').slice(0, 14);
+            v = v.replace(/^(\d{2})(\d)/, '$1.$2');
+            v = v.replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3');
+            v = v.replace(/\.(\d{3})(\d)/, '.$1/$2');
+            v = v.replace(/(\d{4})(\d)/, '$1-$2');
+            this.value = v;
+        });
+
+        // ─── CTA FORM → WHATSAPP ──────────────────────────────────
+        const WA = '5511999999999';
+        document.getElementById('btn-whatsapp').addEventListener('click', () => {
+            const rs = document.getElementById('razao-social').value.trim();
+            const cnpj = document.getElementById('cnpj').value.trim();
+            if (!rs || !cnpj) { alert('Por favor, preencha a Razão Social e o CNPJ.'); return; }
+            const msg = encodeURIComponent(
+                `Olá, Nyr Festas! Acessei o site e tenho interesse em fazer pedidos.\n\n` +
+                `*Razão Social:* ${rs}\n*CNPJ:* ${cnpj}\n\n` +
+                `Gostaria de solicitar o catálogo completo.`
+            );
+            window.open(`https://wa.me/${WA}?text=${msg}`, '_blank');
+        });
+
+
+        /* ═══════════════════════════════════════════════
+           HERO NYR — confetti, parallax, flip, hamburgers
+        ═══════════════════════════════════════════════ */
+        /* ═══════════════════════════════════════════════
+                   CONFETTI — delta time, 130 peças
+                ═══════════════════════════════════════════════ */
+        const canvas = document.getElementById('confetti-canvas');
+        const ctx = canvas.getContext('2d');
+
+        const DARK_COLORS = [
+            'rgba(244,160,  0,0.75)',
+            'rgba(244,130,  0,0.55)',
+            'rgba(255,200, 60,0.55)',
+            'rgba(255,255,255,0.18)',
+            'rgba(255,255,255,0.10)',
+        ];
+
+        const LIGHT_COLORS = [
+            'rgba(244,160,  0,0.92)',
+            'rgba(244,130,  0,0.82)',
+            'rgba(255,180,  0,0.72)',
+            'rgba( 13, 13, 13,0.30)',
+            'rgba( 13, 13, 13,0.22)',
+        ];
+
+        let palette = DARK_COLORS;
+        const SHAPES = ['circle', 'rect', 'line'];
+        const PIECE_COUNT = window.innerWidth < 768 ? 55 : 130;
+
+        class Piece {
+            constructor(scatter = false) { this.reset(scatter); }
+
+            reset(scatter = false) {
+                this.x = Math.random() * canvas.width;
+                this.y = scatter ? Math.random() * canvas.height : -20;
+                this.size = Math.random() * 5 + 2;
+                this.speedY = Math.random() * 1.3 + 1.2;
+                this.speedX = (Math.random() - 0.5) * 0.8;
+                this.angle = Math.random() * Math.PI * 2;
+                this.spin = (Math.random() - 0.5) * 0.02;
+                this.color = palette[Math.floor(Math.random() * palette.length)];
+                this.shape = SHAPES[Math.floor(Math.random() * SHAPES.length)];
+                this.aspect = Math.random() * 1.5 + 0.5;
+                this.opacity = Math.random() * 0.6 + 0.3;
+                this.fadeIn = scatter ? 1 : 0;
+            }
+
+            update(dt) {
+                this.y += this.speedY * dt;
+                this.x += this.speedX * dt;
+                this.angle += this.spin * dt;
+                if (this.fadeIn < 1) this.fadeIn = Math.min(1, this.fadeIn + 0.012 * dt);
+                if (this.y > canvas.height + 20) this.reset(false);
+            }
+
+            draw() {
+                ctx.save();
+                ctx.globalAlpha = this.opacity * this.fadeIn;
+                ctx.translate(this.x, this.y);
+                ctx.rotate(this.angle);
+                ctx.fillStyle = this.color;
+                ctx.strokeStyle = this.color;
+
+                if (this.shape === 'circle') {
+                    ctx.beginPath();
+                    ctx.arc(0, 0, this.size / 2, 0, Math.PI * 2);
+                    ctx.fill();
+                } else if (this.shape === 'rect') {
+                    ctx.fillRect(-(this.size * this.aspect) / 2, -this.size / 2,
+                        this.size * this.aspect, this.size);
+                } else {
+                    ctx.lineWidth = 1.2;
+                    ctx.beginPath();
+                    ctx.moveTo(0, -this.size * 1.8);
+                    ctx.lineTo(0, this.size * 1.8);
+                    ctx.stroke();
+                }
+                ctx.restore();
+            }
+        }
+
+        let pieces = [];
+        let lastTime = 0;
+
+        function resize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        function init() {
+            resize();
+            pieces = Array.from({ length: PIECE_COUNT }, () => new Piece(true));
+        }
+
+        window.addEventListener('resize', () => {
+            resize();
+            pieces.forEach(p => { p.x = Math.random() * canvas.width; });
+            positionIndicator(document.querySelector('.toggle-btn.active'));
+        }, { passive: true });
+
+        function loop(ts) {
+            const dt = lastTime ? Math.min((ts - lastTime) / 16.667, 3) : 1;
+            lastTime = ts;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            pieces.forEach(p => { p.update(dt); p.draw(); });
+            requestAnimationFrame(loop);
+        }
+
+        init();
+        requestAnimationFrame(loop);
+
+        /* ═══════════════════════════════════════════════
+           PARALLAX — mouse moves geo rings at depth-scaled speed
+           Each .geo-px wrapper is translated; its child animates independently.
+        ═══════════════════════════════════════════════ */
+        const geoPxEls = document.querySelectorAll('.geo-px');
+        let mouseNX = 0, mouseNY = 0;  // normalised -1..1
+        let pxCurrX = 0, pxCurrY = 0; // lerped values
+        const PX_MAX = 24;  // max pixel offset
+        const PX_LERP = 0.055; // smoothing (lower = slower/smoother)
+
+        document.addEventListener('mousemove', (e) => {
+            mouseNX = (e.clientX - window.innerWidth / 2) / (window.innerWidth / 2);
+            mouseNY = (e.clientY - window.innerHeight / 2) / (window.innerHeight / 2);
+        }, { passive: true });
+
+        function parallaxLoop() {
+            pxCurrX += (mouseNX - pxCurrX) * PX_LERP;
+            pxCurrY += (mouseNY - pxCurrY) * PX_LERP;
+
+            geoPxEls.forEach(el => {
+                const depth = parseFloat(el.dataset.depth);
+                const ox = pxCurrX * depth * PX_MAX;
+                const oy = pxCurrY * depth * PX_MAX;
+                el.style.transform = `translate(${ox.toFixed(2)}px, ${oy.toFixed(2)}px)`;
+            });
+
+            requestAnimationFrame(parallaxLoop);
+        }
+        parallaxLoop();
+
+        /* ═══════════════════════════════════════════════
+           TOGGLE + STATE — Flip 3D
+        ═══════════════════════════════════════════════ */
+        const body = document.body;
+        const flipCard = document.getElementById('flip-card');
+        const indicator = document.getElementById('toggle-indicator');
+        const toggleBtns = document.querySelectorAll('.toggle-btn');
+
+        let currentMode = 'inicio';
+        let hasInteracted = false;
+        let autoTimer = null;
+        let isFlipping = false;
+
+        function positionIndicator(btn) {
+            if (!btn) return;
+            indicator.style.left = btn.offsetLeft + 'px';
+            indicator.style.width = btn.offsetWidth + 'px';
+        }
+
+        function updateToggleUI(mode) {
+            toggleBtns.forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.target === mode);
+            });
+            positionIndicator(document.querySelector(`.toggle-btn[data-target="${mode}"]`));
+        }
+
+        function applyMode(mode, skipAnimation = false) {
+            const forward = mode === 'apresentacao';
+
+            body.dataset.mode = mode;
+            currentMode = mode;
+
+            palette = mode === 'inicio' ? DARK_COLORS : LIGHT_COLORS;
+            pieces.forEach(p => {
+                p.color = palette[Math.floor(Math.random() * palette.length)];
+            });
+
+            updateToggleUI(mode);
+
+            if (skipAnimation) {
+                flipCard.style.transition = 'none';
+                flipCard.classList.toggle('flipped', forward);
+                requestAnimationFrame(() => { flipCard.style.transition = ''; });
+                return;
+            }
+
+            isFlipping = true;
+            flipCard.classList.toggle('flipped', forward);
+
+            /* Re-enable toggle after flip completes (720ms) */
+            setTimeout(() => { isFlipping = false; }, 720);
+        }
+
+        function handleToggle(target) {
+            if (target === currentMode || isFlipping) return;
+            if (!hasInteracted) {
+                hasInteracted = true;
+                clearTimeout(autoTimer);
+            }
+            applyMode(target);
+        }
+
+        toggleBtns.forEach(btn => {
+            btn.addEventListener('click', () => handleToggle(btn.dataset.target));
+        });
+
+        applyMode('inicio', true);
+
+        document.fonts.ready.then(() => {
+            positionIndicator(document.querySelector('.toggle-btn.active'));
+        });
+
+        function startHero() {
+            autoTimer = setTimeout(() => {
+                if (!hasInteracted) applyMode('apresentacao');
+            }, 6000);
+        }
+
+        /* ═══════════════════════════════════════════════
+           SPLIT TEXT — chars grouped by word
+           Each word is a wrapper with white-space:nowrap
+           so line breaks only happen between words.
+        ═══════════════════════════════════════════════ */
+        function splitTextIntoChars(selector) {
+            const el = document.querySelector(selector);
+            if (!el) return;
+            const words = el.textContent.trim().split(' ');
+            el.textContent = '';
+            words.forEach((word, wi) => {
+                /* Word wrapper — never breaks inside */
+                const wordEl = document.createElement('span');
+                wordEl.className = 'word';
+                wordEl.style.cssText = 'display:inline-block; white-space:nowrap;';
+
+                /* Each character */
+                [...word].forEach(char => {
+                    const outer = document.createElement('span');
+                    outer.className = 'char';
+                    const inner = document.createElement('span');
+                    inner.className = 'char-inner';
+                    inner.textContent = char;
+                    outer.appendChild(inner);
+                    wordEl.appendChild(outer);
+                });
+
+                el.appendChild(wordEl);
+
+                /* Space between words (except after last) */
+                if (wi < words.length - 1) {
+                    const space = document.createElement('span');
+                    space.className = 'char';
+                    space.style.cssText = 'display:inline-block;';
+                    const spaceInner = document.createElement('span');
+                    spaceInner.className = 'char-inner';
+                    spaceInner.textContent = '\u00A0';
+                    space.appendChild(spaceInner);
+                    el.appendChild(space);
+                }
+            });
+        }
+
+        function revealSplitText(selector, baseDelay) {
+            document.querySelectorAll(`${selector} .char-inner`).forEach((ch, i) => {
+                setTimeout(() => ch.classList.add('revealed'), baseDelay + i * 38);
+            });
+        }
+
+        /* ═══════════════════════════════════════════════
+           HERO ENTRANCE SEQUENCE — triggered after loader
+        ═══════════════════════════════════════════════ */
+        function startHeroSequence() {
+
+            /* 1 — Nav row-1 login buttons */
+            setTimeout(() => {
+                document.querySelector('.header-row-1').classList.add('el-visible');
+            }, 0);
+
+            /* 2 — Logo */
+            setTimeout(() => {
+                const navLogo = document.querySelector('.nav-logo');
+                if (navLogo) navLogo.classList.add('el-visible');
+            }, 100);
+
+            /* 3 — Nav links staggered */
+            document.querySelectorAll('.header-nav li').forEach((li, i) => {
+                setTimeout(() => li.classList.add('el-visible'), 180 + i * 50);
+            });
+
+            /* 4 — Geo elements */
+            const geoEls = document.querySelectorAll(
+                '.geo-ring-1,.geo-ring-2,.geo-ring-3,.geo-ring-4,.geo-ring-5,' +
+                '.geo-sq-1,.geo-sq-2,.geo-sq-3,.geo-dot-1,.geo-dot-2,.geo-dot-3'
+            );
+            geoEls.forEach((el, i) => {
+                setTimeout(() => el.classList.add('geo-visible'), 150 + i * 70);
+            });
+
+            /* 5 — Logo A+C */
+            setTimeout(() => {
+                const logoImg = document.getElementById('hero-logo-img');
+                const logoOuter = document.getElementById('hero-logo-outer');
+                logoImg.classList.add('logo-entering');
+                setTimeout(() => logoOuter.classList.add('logo-floating'), 960);
+            }, 300);
+
+            /* 6 — Separator */
+            setTimeout(() => {
+                document.querySelector('.hero-separator').classList.add('el-visible');
+            }, 450);
+
+            /* 7 — Split text top */
+            setTimeout(() => revealSplitText('.inicio-label-top', 0), 520);
+
+            /* 8 — Split text bottom */
+            setTimeout(() => revealSplitText('.inicio-label-bottom', 0), 720);
+
+            /* 9 — Toggle + hero bottom */
+            setTimeout(() => {
+                document.querySelector('.hero-toggle').classList.add('el-visible');
+                document.querySelector('.hero-bottom').classList.add('el-visible');
+            }, 950);
+
+            /* 10 — Auto-advance */
+            startHero();
+
+            /* 11 — Counter observer (replaces site's hideLoader call) */
+            if (typeof initCounterObserver === 'function') initCounterObserver();
+        }
+
+        /* ═══════════════════════════════════════════════
+           HEIGHT-HAMBURGER — menu para tablet landscape comprimido
+           Mesmo comportamento do hamburger hero.
+        ═══════════════════════════════════════════════ */
+        const heightHamburger = document.getElementById('height-hamburger');
+        const heightNav = document.getElementById('height-nav');
+
+        heightHamburger.addEventListener('click', () => {
+            const open = heightNav.classList.toggle('open');
+            heightHamburger.classList.toggle('open', open);
+            siteHeader.classList.toggle('height-menu-open', open);
+            heightHamburger.setAttribute('aria-expanded', open);
+            heightNav.setAttribute('aria-hidden', !open);
+        });
+
+        heightNav.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                heightNav.classList.remove('open');
+                heightHamburger.classList.remove('open');
+                siteHeader.classList.remove('height-menu-open');
+                heightHamburger.setAttribute('aria-expanded', false);
+                heightNav.setAttribute('aria-hidden', true);
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (heightNav.classList.contains('open') && !siteHeader.contains(e.target)) {
+                heightNav.classList.remove('open');
+                heightHamburger.classList.remove('open');
+                siteHeader.classList.remove('height-menu-open');
+                heightHamburger.setAttribute('aria-expanded', false);
+                heightNav.setAttribute('aria-hidden', true);
+            }
+        });
+
+        /* ═══════════════════════════════════════════════
+           PAGE LOADER — Promise.all waits for real load
+        ═══════════════════════════════════════════════ */
+
+        /* Pre-split text so chars are ready before hero shows */
+        splitTextIntoChars('.inicio-label-top');
+        splitTextIntoChars('.inicio-label-bottom');
+
+        const loader = document.getElementById('page-loader');
+        const loaderImg = loader.querySelector('.loader-logo');
+        const ringWrap = loader.querySelector('.loader-ring-wrap');
+        const ring = loader.querySelector('.loader-ring');
+
+        Promise.all([
+            document.fonts.ready,
+            new Promise(resolve => {
+                if (loaderImg.complete && loaderImg.naturalWidth > 0) resolve();
+                else { loaderImg.onload = resolve; loaderImg.onerror = resolve; }
+            })
+        ]).then(() => {
+
+            /* Step 1 — Logo rises from bottom */
+            loaderImg.classList.add('animating');
+
+            /* Step 2 — Ring appears and draws after logo settles */
+            setTimeout(() => {
+                ringWrap.classList.add('animating');
+                /* Force reflow so animation starts cleanly */
+                void ring.offsetWidth;
+                ring.classList.add('animating');
+            }, 1050);
+
+            /* Step 3 — Slide loader out after ring finishes */
+            const RING_DRAW = 1800;
+            const RING_DELAY = 1050;
+            const PAUSE = 300;
+            const SLIDE = 700;
+
+            setTimeout(() => {
+                loader.classList.add('slide-out');
+                setTimeout(() => {
+                    loader.remove();
+                    startHeroSequence();
+                }, SLIDE);
+            }, RING_DELAY + RING_DRAW + PAUSE);
+        });
+
+        // SERVICE CAROUSEL
+        document.querySelectorAll('[data-carousel]').forEach(function (carousel) {
+            var track = carousel.querySelector('.svc-carousel-track');
+            var slides = carousel.querySelectorAll('.svc-slide');
+            var dotsWrap = carousel.querySelector('.svc-dots');
+            var prevBtn = carousel.querySelector('.svc-prev');
+            var nextBtn = carousel.querySelector('.svc-next');
+            var current = 0;
+            var total = slides.length;
+
+            slides.forEach(function (_, i) {
+                var dot = document.createElement('button');
+                dot.className = i === 0 ? 'svc-dot active' : 'svc-dot';
+                dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+                dot.addEventListener('click', function () { goTo(i); });
+                dotsWrap.appendChild(dot);
+            });
+
+            if (total <= 1) {
+                prevBtn.style.display = 'none';
+                nextBtn.style.display = 'none';
+                dotsWrap.style.display = 'none';
+            }
+
+            function goTo(index) {
+                current = (index + total) % total;
+                track.style.transform = 'translateX(-' + (current * 100) + '%)';
+                dotsWrap.querySelectorAll('.svc-dot').forEach(function (d, i) {
+                    d.className = i === current ? 'svc-dot active' : 'svc-dot';
+                });
+            }
+
+            prevBtn.addEventListener('click', function () { goTo(current - 1); });
+            nextBtn.addEventListener('click', function () { goTo(current + 1); });
+        });
+    </script>
+</body>
+
+</html>
