@@ -43,7 +43,7 @@
             background: #f0f0f0;
         }
 
-        /* ── PÁGINA (conteúdo de fundo para o blur funcionar) ── */
+        /* ── PÁGINA ── */
         .page-section {
             padding: 64px 32px;
             max-width: 1280px;
@@ -211,7 +211,6 @@
             margin-bottom: 16px;
         }
 
-        /* Botão primário — abre vídeo */
         .card-video-btn-primary {
             display: flex;
             align-items: center;
@@ -243,7 +242,6 @@
             flex-shrink: 0;
         }
 
-        /* Botão secundário — WhatsApp */
         .card-cta-secondary {
             display: flex;
             align-items: center;
@@ -277,15 +275,6 @@
             flex-shrink: 0;
         }
 
-        /* ── OVERLAY BASE ── */
-        .modal-overlay-base {
-            position: fixed;
-            inset: 0;
-            background: rgba(13, 13, 13, 0.55);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-
         /* ══════════════════════════════════════════════════
    MODAL VÍDEO
 ══════════════════════════════════════════════════ */
@@ -303,131 +292,98 @@
             display: none;
         }
 
-        .modal-video-card {
+        .modal-video-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(13, 13, 13, 0.55);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        /* Wrapper: centraliza o × + card em coluna */
+        .modal-video-wrapper {
             position: relative;
             z-index: 1;
-            background: var(--white);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 32px 80px rgba(0, 0, 0, 0.5);
-            animation: modal-in 0.28s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
             display: flex;
-            width: 100%;
+            flex-direction: column;
+            align-items: flex-end;
+            width: min(400px, calc(100vw - 32px));
+            max-height: calc(100vh - 48px);
         }
 
-        @keyframes modal-in {
-            from {
-                opacity: 0;
-                transform: scale(0.92)
-            }
-
-            to {
-                opacity: 1;
-                transform: scale(1)
-            }
-        }
-
-        /* Botão fechar — fora das colunas, absoluto no card */
+        /* × — acima do card, alinhado à direita */
         .modal-video-close {
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            z-index: 10;
-            width: 32px;
-            height: 32px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             border: none;
-            background: rgba(0, 0, 0, 0.45);
+            background: rgba(255, 255, 255, 0.15);
             color: #fff;
-            font-size: 18px;
+            font-size: 20px;
             line-height: 1;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            backdrop-filter: blur(4px);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
             transition: background var(--transition);
+            margin-bottom: 10px;
+            flex-shrink: 0;
         }
 
         .modal-video-close:hover {
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(255, 255, 255, 0.28);
         }
 
-        /* ── DESKTOP (≥640px): duas colunas ── */
-        @media (min-width: 640px) {
-            .modal-video-card {
-                flex-direction: row;
-                max-width: 820px;
-                height: min(520px, calc(100vh - 48px));
+        /* Card: coluna única, scroll se necessário */
+        .modal-video-card {
+            width: 100%;
+            background: var(--white);
+            border-radius: 20px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            box-shadow: 0 32px 80px rgba(0, 0, 0, 0.5);
+            animation: modal-in 0.28s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+
+        @keyframes modal-in {
+            from {
+                opacity: 0;
+                transform: scale(0.92) translateY(8px)
             }
 
-            .modal-video-col-left {
-                width: 360px;
-                flex-shrink: 0;
-                background: #000;
-            }
-
-            .modal-video-col-left iframe {
-                width: 100%;
-                height: 100%;
-                border: none;
-                display: block;
-            }
-
-            .modal-video-col-right {
-                flex: 1;
-                padding: 32px 28px 24px;
-                display: flex;
-                flex-direction: column;
-                overflow-y: auto;
-            }
-
-            /* Mobile-only elements ocultos no desktop */
-            .modal-wa-btn-mobile {
-                display: none !important;
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0)
             }
         }
 
-        /* ── MOBILE (<640px): coluna única ── */
-        @media (max-width: 639px) {
-            .modal-video-card {
-                flex-direction: column;
-                max-width: 420px;
-                max-height: calc(100vh - 48px);
-                overflow-y: auto;
-                border-radius: 16px;
-            }
-
-            .modal-video-col-left {
-                width: 100%;
-                height: 68vw;
-                flex-shrink: 0;
-                background: #000;
-            }
-
-            .modal-video-col-left iframe {
-                width: 100%;
-                height: 100%;
-                border: none;
-                display: block;
-            }
-
-            .modal-video-col-right {
-                padding: 20px 20px 24px;
-                display: flex;
-                flex-direction: column;
-            }
-
-            /* Formulário oculto no mobile */
-            .modal-video-form {
-                display: none !important;
-            }
+        /* Vídeo: largura total do card, altura natural 9:16 */
+        .modal-video-media {
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            background: #000;
+            display: block;
+            flex-shrink: 0;
         }
 
-        /* Conteúdo da coluna direita */
+        .modal-video-media iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        /* Informações abaixo do vídeo */
+        .modal-video-info {
+            padding: 24px 22px 28px;
+            background: var(--white);
+        }
+
         .modal-video-product-name {
             font-family: 'Anton', sans-serif;
-            font-size: 22px;
+            font-size: 20px;
             letter-spacing: 1px;
             text-transform: uppercase;
             color: var(--black);
@@ -439,90 +395,10 @@
             font-size: 13px;
             color: var(--gray-text);
             line-height: 1.65;
-            flex: 1;
             margin-bottom: 20px;
         }
 
-        .modal-video-divider {
-            height: 1px;
-            background: var(--gray-2);
-            margin-bottom: 20px;
-        }
-
-        /* Formulário embutido (desktop) */
-        .modal-video-form .form-label {
-            display: block;
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--gray-text);
-            margin-bottom: 6px;
-        }
-
-        .modal-video-form .form-input {
-            width: 100%;
-            padding: 11px 14px;
-            background: var(--gray-1);
-            border: 1.5px solid var(--gray-2);
-            border-radius: 8px;
-            font-family: 'Barlow', sans-serif;
-            font-size: 14px;
-            color: var(--black);
-            outline: none;
-            transition: border-color var(--transition), background var(--transition);
-            margin-bottom: 14px;
-        }
-
-        .modal-video-form .form-input:focus {
-            border-color: var(--brand-orange);
-            background: var(--white);
-        }
-
-        .modal-video-form .form-input::placeholder {
-            color: #b0b0b0;
-        }
-
-        .modal-video-form .form-submit {
-            width: 100%;
-            padding: 13px;
-            background: #25D366;
-            color: var(--white);
-            font-family: 'Anton', sans-serif;
-            font-size: 13px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            border: none;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            cursor: pointer;
-            transition: opacity var(--transition);
-        }
-
-        .modal-video-form .form-submit:hover {
-            opacity: .88;
-        }
-
-        .modal-video-form .form-submit svg {
-            width: 15px;
-            height: 15px;
-            fill: currentColor;
-            flex-shrink: 0;
-        }
-
-        .modal-video-form .form-note {
-            font-size: 11px;
-            color: #b0b0b0;
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        /* Botão WhatsApp mobile (dentro do modal-video) */
-        .modal-wa-btn-mobile {
+        .modal-video-wa-btn {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -539,15 +415,14 @@
             border: none;
             cursor: pointer;
             width: 100%;
-            margin-top: 16px;
             transition: opacity var(--transition);
         }
 
-        .modal-wa-btn-mobile:hover {
+        .modal-video-wa-btn:hover {
             opacity: .88;
         }
 
-        .modal-wa-btn-mobile svg {
+        .modal-video-wa-btn svg {
             width: 15px;
             height: 15px;
             fill: currentColor;
@@ -555,7 +430,7 @@
         }
 
         /* ══════════════════════════════════════════════════
-   MODAL WHATSAPP (mobile — abre por cima do vídeo)
+   MODAL WHATSAPP
 ══════════════════════════════════════════════════ */
         .modal-wa {
             position: fixed;
@@ -569,6 +444,14 @@
 
         .modal-wa[hidden] {
             display: none;
+        }
+
+        .modal-wa-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
         }
 
         .modal-wa-card {
@@ -635,11 +518,11 @@
             margin-top: 3px;
         }
 
-        .modal-wa .form-group {
+        .form-group {
             margin-bottom: 16px;
         }
 
-        .modal-wa .form-label {
+        .form-label {
             display: block;
             font-family: 'Barlow Condensed', sans-serif;
             font-size: 11px;
@@ -650,7 +533,7 @@
             margin-bottom: 6px;
         }
 
-        .modal-wa .form-input {
+        .form-input {
             width: 100%;
             padding: 12px 14px;
             background: var(--gray-1);
@@ -660,19 +543,19 @@
             font-size: 14px;
             color: var(--black);
             outline: none;
-            transition: border-color var(--transition);
+            transition: border-color var(--transition), background var(--transition);
         }
 
-        .modal-wa .form-input:focus {
+        .form-input:focus {
             border-color: var(--brand-orange);
             background: var(--white);
         }
 
-        .modal-wa .form-input::placeholder {
+        .form-input::placeholder {
             color: #b0b0b0;
         }
 
-        .modal-wa .form-submit {
+        .form-submit {
             width: 100%;
             padding: 14px;
             background: #25D366;
@@ -692,18 +575,18 @@
             margin-top: 6px;
         }
 
-        .modal-wa .form-submit:hover {
+        .form-submit:hover {
             opacity: .88;
         }
 
-        .modal-wa .form-submit svg {
+        .form-submit svg {
             width: 16px;
             height: 16px;
             fill: currentColor;
             flex-shrink: 0;
         }
 
-        .modal-wa .form-note {
+        .form-note {
             font-size: 11px;
             color: #b0b0b0;
             text-align: center;
@@ -714,7 +597,7 @@
 
 <body>
 
-    <!-- ── PÁGINA (fundo visível durante o blur) ── -->
+    <!-- PÁGINA -->
     <section class="page-section">
         <div class="page-header">
             <span class="section-eyebrow">Catálogo</span>
@@ -729,7 +612,7 @@
         </div>
         <div class="cards-row">
 
-            <!-- Card 1 — interativo -->
+            <!-- Card interativo -->
             <article class="card">
                 <div class="card-media">
                     <div class="card-media-placeholder"><span>Produto 01</span></div>
@@ -812,64 +695,35 @@
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════════════════
-     MODAL VÍDEO
-══════════════════════════════════════════════════ -->
+    <!-- MODAL VÍDEO -->
     <div id="modal-video" class="modal-video" hidden>
-        <div class="modal-overlay-base"></div>
-        <div class="modal-video-card">
+        <div class="modal-video-overlay" id="modal-video-overlay"></div>
+        <div class="modal-video-wrapper">
             <button class="modal-video-close" id="modal-video-close">&times;</button>
-
-            <!-- Coluna esquerda: vídeo -->
-            <div class="modal-video-col-left">
-                <iframe id="modal-video-iframe" src=""
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-
-            <!-- Coluna direita: info + form (desktop) / info + botão WA (mobile) -->
-            <div class="modal-video-col-right">
-                <p class="modal-video-product-name" id="modal-product-name"></p>
-                <p class="modal-video-product-desc" id="modal-product-desc"></p>
-
-                <div class="modal-video-divider"></div>
-
-                <!-- Formulário embutido — visível só no desktop -->
-                <form class="modal-video-form" id="modal-video-form" onsubmit="return false">
-                    <label class="form-label" for="vf-razao-social">Razão Social</label>
-                    <input class="form-input" type="text" id="vf-razao-social" placeholder="Nome da sua empresa"
-                        autocomplete="organization">
-
-                    <label class="form-label" for="vf-cnpj">CNPJ</label>
-                    <input class="form-input" type="text" id="vf-cnpj" placeholder="00.000.000/0000-00" maxlength="18">
-
-                    <button class="form-submit" id="vf-submit">
+            <div class="modal-video-card">
+                <div class="modal-video-media">
+                    <iframe id="modal-video-iframe" src=""
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-video-info">
+                    <p class="modal-video-product-name" id="modal-product-name"></p>
+                    <p class="modal-video-product-desc" id="modal-product-desc"></p>
+                    <button class="modal-video-wa-btn" id="modal-video-wa-btn">
                         <svg viewBox="0 0 24 24">
                             <path
                                 d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
                         </svg>
-                        Enviar pelo WhatsApp
+                        Falar com Atendente
                     </button>
-                    <p class="form-note">Apenas lojistas com CNPJ ativo · Retorno em até 24h úteis</p>
-                </form>
-
-                <!-- Botão WA — visível só no mobile -->
-                <button class="modal-wa-btn-mobile" id="modal-wa-btn-mobile">
-                    <svg viewBox="0 0 24 24">
-                        <path
-                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.129.558 4.126 1.532 5.856L.057 23.784a.5.5 0 0 0 .602.617l6.077-1.43A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.524-5.18-1.434l-.37-.22-3.827.901.928-3.73-.242-.384A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
-                    </svg>
-                    Falar com Atendente
-                </button>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- ══════════════════════════════════════════════════
-     MODAL WHATSAPP (mobile — sobre o modal vídeo)
-══════════════════════════════════════════════════ -->
+    <!-- MODAL WHATSAPP -->
     <div id="modal-wa" class="modal-wa" hidden>
-        <div class="modal-overlay-base" style="background:rgba(0,0,0,0.4)"></div>
+        <div class="modal-wa-overlay" id="modal-wa-overlay"></div>
         <div class="modal-wa-card">
             <button class="modal-wa-close" id="modal-wa-close">&times;</button>
             <div class="modal-wa-header">
@@ -904,7 +758,6 @@
     <script>
         const WA_NUMBER = '5511999999999';
 
-        // ── Helpers ──────────────────────────────────
         function getEmbedUrl(url) {
             const match = url.match(/(?:shorts\/|v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
             return match ? `https://www.youtube.com/embed/${match[1]}?autoplay=1&rel=0&modestbranding=1` : '';
@@ -932,17 +785,13 @@
         // ── Modal Vídeo ──────────────────────────────
         const modalVideo = document.getElementById('modal-video');
         const videoIframe = document.getElementById('modal-video-iframe');
-        const videoOverlay = modalVideo.querySelector('.modal-overlay-base');
+        const videoOverlay = document.getElementById('modal-video-overlay');
         const videoClose = document.getElementById('modal-video-close');
-        const productName = document.getElementById('modal-product-name');
-        const productDesc = document.getElementById('modal-product-desc');
 
         function openVideoModal(videoUrl, name, desc) {
             videoIframe.src = getEmbedUrl(videoUrl);
-            productName.textContent = name || '';
-            productDesc.textContent = desc || '';
-            document.getElementById('vf-razao-social').value = '';
-            document.getElementById('vf-cnpj').value = '';
+            document.getElementById('modal-product-name').textContent = name || '';
+            document.getElementById('modal-product-desc').textContent = desc || '';
             modalVideo.removeAttribute('hidden');
             document.body.style.overflow = 'hidden';
         }
@@ -953,37 +802,18 @@
             document.body.style.overflow = '';
         }
 
-        videoClose.addEventListener('click', closeVideoModal);
-        videoOverlay.addEventListener('click', closeVideoModal);
-
-        // Gatilho nos botões primários com data-video
         document.querySelectorAll('[data-video]').forEach(btn => {
             btn.addEventListener('click', () => {
                 openVideoModal(btn.dataset.video, btn.dataset.name, btn.dataset.desc);
             });
         });
 
-        // Envio desktop (formulário embutido)
-        maskCNPJ(document.getElementById('vf-cnpj'));
-        document.getElementById('vf-submit').addEventListener('click', () => {
-            const rs = document.getElementById('vf-razao-social').value.trim();
-            const cnpj = document.getElementById('vf-cnpj').value.trim();
-            const rsInput = document.getElementById('vf-razao-social');
-            const cnpjInput = document.getElementById('vf-cnpj');
-            rsInput.style.borderColor = !rs ? '#e53935' : '';
-            cnpjInput.style.borderColor = !cnpj ? '#e53935' : '';
-            if (!rs || !cnpj) return;
-            window.open(`https://wa.me/${WA_NUMBER}?text=${buildWAMsg(rs, cnpj)}`, '_blank');
-            // Modal vídeo permanece aberto
-        });
+        videoClose.addEventListener('click', closeVideoModal);
+        videoOverlay.addEventListener('click', closeVideoModal);
 
-        [document.getElementById('vf-razao-social'), document.getElementById('vf-cnpj')].forEach(el => {
-            el.addEventListener('input', () => { el.style.borderColor = ''; });
-        });
-
-        // ── Modal WhatsApp (mobile) ──────────────────
+        // ── Modal WhatsApp ───────────────────────────
         const modalWA = document.getElementById('modal-wa');
-        const waOverlay = modalWA.querySelector('.modal-overlay-base');
+        const waOverlay = document.getElementById('modal-wa-overlay');
         const waClose = document.getElementById('modal-wa-close');
 
         function openWAModal() {
@@ -996,18 +826,21 @@
             modalWA.setAttribute('hidden', '');
         }
 
-        document.getElementById('modal-wa-btn-mobile').addEventListener('click', openWAModal);
+        // Abre WA a partir do botão no modal de vídeo
+        document.getElementById('modal-video-wa-btn').addEventListener('click', openWAModal);
+
         waClose.addEventListener('click', closeWAModal);
         waOverlay.addEventListener('click', closeWAModal);
 
         maskCNPJ(document.getElementById('wa-cnpj'));
+
         document.getElementById('wa-submit').addEventListener('click', () => {
             const rs = document.getElementById('wa-razao-social').value.trim();
             const cnpj = document.getElementById('wa-cnpj').value.trim();
-            const rsInput = document.getElementById('wa-razao-social');
-            const cnpjInput = document.getElementById('wa-cnpj');
-            rsInput.style.borderColor = !rs ? '#e53935' : '';
-            cnpjInput.style.borderColor = !cnpj ? '#e53935' : '';
+            const rsEl = document.getElementById('wa-razao-social');
+            const cnpjEl = document.getElementById('wa-cnpj');
+            rsEl.style.borderColor = !rs ? '#e53935' : '';
+            cnpjEl.style.borderColor = !cnpj ? '#e53935' : '';
             if (!rs || !cnpj) return;
             window.open(`https://wa.me/${WA_NUMBER}?text=${buildWAMsg(rs, cnpj)}`, '_blank');
             closeWAModal();
@@ -1017,7 +850,7 @@
             el.addEventListener('input', () => { el.style.borderColor = ''; });
         });
 
-        // Escape fecha o modal mais recente aberto
+        // Escape fecha o modal mais recente
         document.addEventListener('keydown', e => {
             if (e.key !== 'Escape') return;
             if (!modalWA.hasAttribute('hidden')) { closeWAModal(); return; }
